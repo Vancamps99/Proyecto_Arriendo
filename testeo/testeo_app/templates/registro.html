@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block 'content' %}
+<div class="container mt-5">
+    <h2 class="text-center">Registro de Usuario</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        <!-- Mostrar errores generales -->
+        {% if user_form.errors or usuario_form.errors %}
+            <div class="alert alert-danger" role="alert">
+                Hubo errores en el formulario. Por favor, corrígelos e inténtalo de nuevo.
+            </div>
+        {% endif %}
+
+        <!-- Campos del formulario de usuario -->
+        <div class="form-group">
+            {{ user_form.username.label_tag }}
+            {{ user_form.username|add_class:"form-control" }}
+            {{ user_form.username.errors }}
+        </div>
+        <div class="form-group">
+            {{ user_form.email.label_tag }}
+            {{ user_form.email|add_class:"form-control" }}
+            {{ user_form.email.errors }}
+        </div>
+        <div class="form-group">
+            {{ user_form.password.label_tag }}
+            {{ user_form.password|add_class:"form-control" }}
+            {{ user_form.password.errors }}
+        </div>
+        <div class="form-group">
+            {{ user_form.password_confirm.label_tag }}
+            {{ user_form.password_confirm|add_class:"form-control" }}
+            {{ user_form.password_confirm.errors }}
+        </div>
+
+        <!-- Campos del formulario de detalles adicionales -->
+        <div class="form-group">
+            {{ usuario_form.rut.label_tag }}
+            {{ usuario_form.rut|add_class:"form-control" }}
+            {{ usuario_form.rut.errors }}
+        </div>
+        <div class="form-group">
+            {{ usuario_form.tipo_usuario.label_tag }}
+            {{ usuario_form.tipo_usuario|add_class:"form-control" }}
+            {{ usuario_form.tipo_usuario.errors }}
+        </div>
+        <div class="form-group">
+            {{ usuario_form.direccion.label_tag }}
+            {{ usuario_form.direccion|add_class:"form-control" }}
+            {{ usuario_form.direccion.errors }}
+        </div>
+        <div class="form-group">
+            {{ usuario_form.telefono.label_tag }}
+            {{ usuario_form.telefono|add_class:"form-control" }}
+            {{ usuario_form.telefono.errors }}
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mt-4">Registrarse</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+[{
+        "model": "testeo_app.TipoInmueble",
+        "pk": 1,
+        "fields": {
+            "nombre": "Casa",
+            "descripcion": "Propiedad independiente con terreno."
+        }
+    },
+    {
+        "model": "testeo_app.TipoInmueble",
+        "pk": 2,
+        "fields": {
+            "nombre": "Departamento",
+            "descripcion": "Unidad habitacional ."
+        }
+    },
+    {
+        "model": "testeo_app.TipoInmueble",
+        "pk": 3,
+        "fields": {
+            "nombre": "Parcela",
+            "descripcion": "Unidad de terreno."
+        }
+    }
+]

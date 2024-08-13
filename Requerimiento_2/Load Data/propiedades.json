@@ -1,0 +1,21 @@
+[{
+    "model": "testeo_app.Inmueble",
+    "pk": 1,
+    "fields": {
+        "nombre": "Casa de Campo",
+        "descripcion": "Cuenta con hermoso jardín , no tan alejado del centro.",
+        "direccion": "Camino a las Colinas 123",
+        "depto": "",
+        "m2_construidos": 300.0,
+        "m2_totales": 500.0,
+        "estacionamientos": 4,
+        "habitaciones": 5,
+        "banios": 3,
+        "precio": 500000.0,
+        "arrendado": true,
+        "tipo_inmueble": 1,
+        "region": 12,
+        "comuna": 256,
+        "usuarios": [1, 3]
+    }
+}]

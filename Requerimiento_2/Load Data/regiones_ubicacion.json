@@ -1,0 +1,113 @@
+[{
+        "model": "testeo_app.region",
+        "pk": 1,
+        "fields": {
+            "nombre": "Arica y Parinacota"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 2,
+        "fields": {
+            "nombre": "Tarapacá"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 3,
+        "fields": {
+            "nombre": "Antofagasta"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 4,
+        "fields": {
+            "nombre": "Atacama"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 5,
+        "fields": {
+            "nombre": "Coquimbo"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 6,
+        "fields": {
+            "nombre": "Valparaíso"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 7,
+        "fields": {
+            "nombre": "Metropolitana de Santiago"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 8,
+        "fields": {
+            "nombre": "Libertador General Bernardo O'Higgins"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 9,
+        "fields": {
+            "nombre": "Maule"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 10,
+        "fields": {
+            "nombre": "Ñuble"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 11,
+        "fields": {
+            "nombre": "Biobío"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 12,
+        "fields": {
+            "nombre": "La Araucanía"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 13,
+        "fields": {
+            "nombre": "Los Ríos"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 14,
+        "fields": {
+            "nombre": "Los Lagos"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 15,
+        "fields": {
+            "nombre": "Aysén del General Carlos Ibáñez del Campo"
+        }
+    },
+    {
+        "model": "testeo_app.region",
+        "pk": 16,
+        "fields": {
+            "nombre": "Magallanes y la Antártica Chilena"
+        }
+    }
+]

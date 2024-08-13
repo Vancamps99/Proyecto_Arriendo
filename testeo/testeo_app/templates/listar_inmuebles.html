@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+<div class="container mt-5">
+    <h2 class="text-center">Lista de Inmuebles</h2>
+
+    {% if inmuebles %}
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Dirección</th>
+                    <th>Región</th>
+                    <th>Comuna</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for inmueble in inmuebles %}
+                    <tr>
+                        <td>{{ inmueble.id }}</td>
+                        <td>{{ inmueble.nombre }}</td>
+                        <td>{{ inmueble.descripcion }}</td>
+                        <td>{{ inmueble.direccion }}</td>
+                        <td>{{ inmueble.region.nombre }}</td>
+                        <td>{{ inmueble.comuna.nombre }}</td>
+                        <td>{{ inmueble.precio }}</td>
+                        <td>
+                            <a href="{% url 'editar_inmueble' inmueble.id %}" class="btn btn-primary btn-sm">Editar</a>
+                            <a href="{% url 'eliminar_inmueble' inmueble.id %}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar este inmueble?');">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="text-center mt-4">No tienes inmuebles registrados.</p>
+    {% endif %}
+
+    <div class="text-center mt-4">
+        <a href="{% url 'crear_inmueble' %}" class="btn btn-success">Agregar un Nuevo Inmueble</a>
+    </div>
+</div>
+{% endblock %}

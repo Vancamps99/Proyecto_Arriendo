@@ -1,0 +1,23 @@
+
+Comuna: Pozo Almonte
+Nombre: LAS GUILDAS
+Descripción: Hermosa casa
+---
+
+
+Comuna: Freire
+Nombre: Floridaa
+Descripción: Cerca de temuco
+---
+
+
+Comuna: Padre Las Casas
+Nombre: asdasd
+Descripción: asdads
+---
+
+
+Comuna: Curacautín
+Nombre: La florida
+Descripción: XD
+---

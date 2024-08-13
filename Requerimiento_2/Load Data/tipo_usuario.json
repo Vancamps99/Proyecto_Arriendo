@@ -1,0 +1,17 @@
+[{
+        "model": "testeo_app.TipoUsuario",
+        "pk": 1,
+        "fields": {
+            "nombre": "Arrendador",
+            "descripcion": "En busca de arrendatario"
+        }
+    },
+    {
+        "model": "testeo_app.TipoUsuario",
+        "pk": 2,
+        "fields": {
+            "nombre": "Arrendatario",
+            "descripcion": "En busca de arriendo"
+        }
+    }
+]

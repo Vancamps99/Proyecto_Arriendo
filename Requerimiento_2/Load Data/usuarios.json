@@ -1,0 +1,31 @@
+[{
+    "model": "testeo_app.Usuario",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "rut": "111111111",
+        "tipo_usuario": 1,
+        "direccion": "Cal 3",
+        "telefono": "+56 9 1111 1111"
+    }
+}, {
+    "model": "testeo_app.Usuario",
+    "pk": 2,
+    "fields": {
+        "user": 3,
+        "rut": "222222222",
+        "tipo_usuario": 1,
+        "direccion": "Valle 456",
+        "telefono": "+56 9 2222 2222"
+    }
+}, {
+    "model": "testeo_app.Usuario",
+    "pk": 3,
+    "fields": {
+        "user": 4,
+        "rut": "123456789",
+        "tipo_usuario": 2,
+        "direccion": "Av.O'Higgins 789",
+        "telefono": "+56 9 3333 3333"
+    }
+}]

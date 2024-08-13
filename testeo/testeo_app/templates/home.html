@@ -1,0 +1,36 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+{% block 'content' %}
+<div id="home">
+    <h2 class="text-center mt-4">Bienvenidos a Proyecto Inmobiliaria</h2>
+    <p class="text-center">Encuentra tu propiedad ideal con nosotros.</p>
+</div>
+<div id="properties" class="mt-4">
+    <h3 class="text-center">Propiedades Destacadas</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+             
+                <div class="card-body">
+                    <h5 class="card-title">Beautiful Apartment</h5>
+                    <p class="card-text">Located in the heart of the city, this beautiful apartment offers stunning views and modern amenities.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+
+                <div class="card-body">
+                    <h5 class="card-title">Cozy House</h5>
+                    <p class="card-text">This cozy house is perfect for families, with a spacious backyard and a quiet neighborhood.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Agrega más propiedades según sea necesario -->
+    </div>
+</div>
+<div id="contact" class="mt-4">
+    <h3 class="text-center">Contáctanos</h3>
+    <p class="text-center">Para más información, por favor contáctanos a través de nuestro formulario.</p>
+</div>
+{% endblock %}

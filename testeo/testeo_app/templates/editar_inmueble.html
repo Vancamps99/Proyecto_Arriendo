@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block 'content' %}
+<div class="container mt-5">
+    <h2 class="text-center">Editar Inmueble</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        <!-- Mostrar errores generales -->
+        {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+                Hubo errores en el formulario. Por favor, corrígelos e inténtalo de nuevo.
+            </div>
+        {% endif %}
+        
+        <!-- Campos del formulario de inmueble -->
+        <div class="form-group">
+            {{ form.nombre.label_tag }}
+            {{ form.nombre|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.descripcion.label_tag }}
+            {{ form.descripcion|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.direccion.label_tag }}
+            {{ form.direccion|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.depto.label_tag }}
+            {{ form.depto|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.m2_construidos.label_tag }}
+            {{ form.m2_construidos|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.m2_totales.label_tag }}
+            {{ form.m2_totales|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.estacionamientos.label_tag }}
+            {{ form.estacionamientos|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.habitaciones.label_tag }}
+            {{ form.habitaciones|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.banios.label_tag }}
+            {{ form.banios|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.precio.label_tag }}
+            {{ form.precio|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.arrendado.label_tag }}
+            {{ form.arrendado|add_class:"form-check-input" }}
+        </div>
+        <div class="form-group">
+            {{ form.tipo_inmueble.label_tag }}
+            {{ form.tipo_inmueble|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.region.label_tag }}
+            {{ form.region|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            {{ form.comuna.label_tag }}
+            {{ form.comuna|add_class:"form-control" }}
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mt-4">Guardar Cambios</button>
+    </form>
+</div>
+{% endblock %}

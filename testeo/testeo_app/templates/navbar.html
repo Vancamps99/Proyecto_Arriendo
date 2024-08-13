@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg custom-navbar-bg">
+    {% load static %}
+    <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{% static 'img/header.png' %}" alt="Proyecto Inmobiliaria" class="header-img">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+            </li>
+            <!-- Mostrar "Buscar Propiedades" solo si el usuario es arrendatario -->
+            {% if user.is_authenticated and user.usuario.tipo_usuario.nombre == 'Arrendatario' %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'propiedades' %}">Buscar Propiedades</a>
+                </li>
+            {% endif %}
+            <!-- Mostrar enlace a "Mis Propiedades" solo si el usuario no es arrendatario -->
+            {% if user.is_authenticated and user.usuario.tipo_usuario.nombre != 'Arrendatario' %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'listar_inmuebles' %}">Mis Propiedades</a>
+                </li>
+            {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            {% if user.is_authenticated %}
+                <!-- Nombre de usuario con menú desplegable -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ user.username }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{% url 'editar_perfil' %}">Editar perfil</a></li>
+                        <li>
+                            <form method="post" action="{% url 'logout' %}" class="dropdown-item">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-link">Cerrar sesión</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            {% else %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuth" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cuenta
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAuth">
+                        <li><a class="dropdown-item" href="{% url 'login' %}">Iniciar sesión</a></li>
+                        <li><a class="dropdown-item" href="{% url 'registro' %}">Registrarse</a></li>
+                    </ul>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>

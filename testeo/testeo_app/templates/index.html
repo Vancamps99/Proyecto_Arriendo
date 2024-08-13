@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block 'content' %}
+<div class="container mt-4">
+    <h2 class="text-center">Bienvenido a Portal Arriendo</h2>
+    {% if user.is_authenticated %}
+        <h3 class="text-center mt-4 pb-4">Listado de Inmuebles</h3>
+        <div class="row">
+            {% for inmueble in inmuebles %}
+                <div class="col-md-4">
+                    <div class="card mb-4 custom-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                            <p class="card-text">{{ inmueble.descripcion }}</p>
+                            <p class="card-text">Precio: ${{ inmueble.precio }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center mt-4">
+            <img src="{% static 'img/entrada.jpg' %}" alt="Inicie sesión o regístrese" class="index-jpg">
+            <h5 class="mt-4">Por favor, <a href="{% url 'login' %}">inicie sesión</a> o <a href="{% url 'registro' %}">regístrese</a> para ver las propiedades.</h5>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
